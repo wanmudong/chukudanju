@@ -77,9 +77,9 @@
 	</script>
 </head>
 
-<body background="./img/88.jpg" style="background-size: 110%">
-<div class="center">
-			        <h1 style="font-size: 60px">
+<body background="./img/88.jpg" style="background-size: 110%;font-family: '叶根友蚕燕隶书(3500)'">
+<div class="center" style="font-family: '造字工房悦圆演示版'">
+			        <h1 style="font-size: 60px;;">
 						出库单据管理系统<small>Outbound document management system</small>
 					</h1>
 
@@ -92,19 +92,19 @@
 		<%--<img src="./img/03.png">--%>
 		<a href="/demo/serchMaterial?type=allmaterial" class="col-sm-2 col-sm-offset-1">
 			<img src="./img/apple.png">
-			<p>显示全部内容</p>
+			<p style="font-family: '造字工房悦圆演示版'">显示全部内容</p>
 		</a>
 		<a href="/demo/jsp/SearchByID.jsp"class="col-sm-2">
 			<img src="./img/banana.png">
-			<p>查询</p>
+			<p style="font-family: '造字工房悦圆演示版'">查询</p>
 		</a>
 		<a href="/demo/jsp/SearchByInformation.jsp"class="col-sm-2">
 			<img src="./img/Orange.png">
-			<p>相关信息查询</p>
+			<p style="font-family: '造字工房悦圆演示版'">相关信息查询</p>
 		</a>
 		<a href="/demo/jsp/AddMaterialOut.jsp""class="col-sm-2">
 			<img src="./img/Peach.png">
-			<p>增加</p>
+			<p style="font-family: '造字工房悦圆演示版'">增加</p>
 		</a>
 		<%--<a href=""class="col-sm-2">--%>
 		<%--<img src="./img/Peach.png">--%>
@@ -112,7 +112,7 @@
 		<%--</a>--%>
 		<a href="" onClick="custom_close()" role="button" class="col-sm-2">
 			<img src="./img/Pear.png">
-			<p>退出</p>
+			<p style="font-family: '造字工房悦圆演示版'">退出</p>
 		</a>
 
 		<!-- 下方图片 -->

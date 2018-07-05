@@ -63,7 +63,7 @@
 
   </head>
 
-	<body onload="load()">
+	<body onload="load()" style="font-family: '造字工房悦圆演示版'">
 	<div class="center col-xs-4 col-md-4 col-center-block row">
 
 		<form  action="/demo/serchMaterial?type=pickingPerson" name="formid" id="formid"  method="post">

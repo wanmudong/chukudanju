@@ -68,7 +68,7 @@
 
   </head>
 
-	<body onload="load()">
+	<body onload="load()" style="font-family: '造字工房悦圆演示版'">
 	<jsp:include page="/jsp/header.jsp"></jsp:include>
 	<div class="center col-xs-4 col-md-4 col-center-block row">
 		<h1 align="center">

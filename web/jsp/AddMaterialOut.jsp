@@ -37,6 +37,7 @@
             color:red
         }
 
+
     </style>
     <%--<SCRIPT language="javascript" type="text/javascript" src="/demo/js/checkadd.js"></SCRIPT>--%>
     <SCRIPT language="javascript" type="text/javascript">
@@ -205,7 +206,7 @@
 <body onload="load()">
 <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 <jsp:include page="/jsp/header.jsp"></jsp:include>
-<div class="center">
+<div class="center" style="font-family: '造字工房悦圆演示版'">
     <div class="col-xs-6 col-md-4 col-center-block">
         <h1>出库单据增加<small>Outbound Documents Increase</small></h1>
     <form  id="myform"  class="form-horizontal" action="/demo/addMaterialOut" onsubmit="return validate_form(this)" method="post"accept-charset="UTF-8">

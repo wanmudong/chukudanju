@@ -47,7 +47,7 @@
 <form name="form2" id="form2" action="" method="post" >
     <div class="col-xs-6 col-md-8 col-center-block">
         <div class="column-layout-container">
-            <h1>出库单据管理<small>Outbound Document Management</small></h1>
+            <h1  style="font-family: '造字工房悦圆演示版'">出库单据管理<small>Outbound Document Management</small></h1>
 
         </div>
         <h class="center">

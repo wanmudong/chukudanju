@@ -80,7 +80,7 @@
             },
             messages:{
                 "deliveryOrder":{
-                    "required":"出库单号姓名不能为空"
+                    "required":"出库单号不能为空"
                 }
             }
         });
@@ -88,7 +88,7 @@
       </SCRIPT>
   </head>
 	<%--TODO:应当异步检查是否有该出库单号，有之后再让其提交--%>
-	<body onload="load()">
+	<body onload="load()" style="font-family: '造字工房悦圆演示版'">
 	<jsp:include page="/jsp/header.jsp"></jsp:include>
 
 		<div class="center col-xs-4 col-md-4 col-center-block row">
