@@ -78,6 +78,41 @@
             }
 
         );
+        //自定义校验规则
+        $.validator.addMethod(
+            //规则的名称
+            "number",
+            //校验的函数
+            function(value,element,params){
+
+                //定义一个标志
+                var flag = false;
+
+                //value:输入的内容
+                //element:被校验的元素对象
+                //params：规则对应的参数值
+                //目的：对输入的number进行re校验
+                <%--$.ajax({--%>
+                    <%--"async":false,--%>
+                    <%--"url":"${pageContext.request.contextPath}/checkDeliverOrder",--%>
+                    <%--"data":{"checkDeliverOrder":value},--%>
+                    <%--"type":"POST",--%>
+                    <%--"dataType":"json",--%>
+                    <%--"success":function(data){--%>
+                        <%--flag = data.isExist;--%>
+                    <%--}--%>
+                <%--});--%>
+                var patt1=new RegExp("^(0|[1-9][0-9]{0,10})\\.[0-9]{2}$");
+
+               flag=patt1.test(value);
+
+
+
+                //返回false代表该校验器不通过
+                return flag;
+            }
+
+        );
 
 
         $(function(){
@@ -90,7 +125,8 @@
                     },
                     "money":{
                         "required":true,
-                        "max":1000000000.00
+                        "max":1000000000.00,
+                        "number":true
                     },
                     "numberofMaterial":{
                         "required":true,
@@ -133,7 +169,8 @@
                     },
                     "money":{
                         "required":"金额不能为空",
-                        "max":"金额不能大于100000000.00"
+                        "max":"金额不能大于100000000.00",
+                        "number":"金额格式不正确！"
                     }, "numberofMaterial":{
                         "required":"领料数量不能为空",
                         "max":"领料数量不能超过9999"

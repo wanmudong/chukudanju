@@ -10,6 +10,7 @@
                        margin:1%;
                        text-align:center; 
                 }
+
         #mainT{width:1200px; text-align: center;font-size: 16px;line-height: 26px;border: 2px solid #6e6e6e;}
         #mainT caption{text-align: center;font-size: 30px;font-weight: bolder;}
         #mainT th{text-align: center;font-size: 20px;font-weight: bolder;line-height: 36px;border: 1px solid #6e6e6e;}

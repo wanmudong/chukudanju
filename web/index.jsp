@@ -90,19 +90,19 @@
                 <%--<a class="btn btn-default" href="/demo/jsp/AddMaterialOut.jsp" role="button">增加出库单据</a>--%>
                 <%--<a class="btn btn-default" onClick="custom_close()" role="button">退出</a>--%>
 		<%--<img src="./img/03.png">--%>
-		<a href="" class="col-sm-2 col-sm-offset-1">
+		<a href="/demo/serchMaterial?type=allmaterial" class="col-sm-2 col-sm-offset-1">
 			<img src="./img/apple.png">
 			<p>显示全部内容</p>
 		</a>
-		<a href=""class="col-sm-2">
+		<a href="/demo/jsp/SearchByID.jsp"class="col-sm-2">
 			<img src="./img/banana.png">
 			<p>查询</p>
 		</a>
-		<a href=""class="col-sm-2">
+		<a href="/demo/jsp/SearchByInformation.jsp"class="col-sm-2">
 			<img src="./img/Orange.png">
 			<p>相关信息查询</p>
 		</a>
-		<a href=""class="col-sm-2">
+		<a href="/demo/jsp/AddMaterialOut.jsp""class="col-sm-2">
 			<img src="./img/Peach.png">
 			<p>增加</p>
 		</a>
@@ -110,7 +110,7 @@
 		<%--<img src="./img/Peach.png">--%>
 		<%--<p>增加</p>--%>
 		<%--</a>--%>
-		<a href=""class="col-sm-2">
+		<a href="" onClick="custom_close()" role="button" class="col-sm-2">
 			<img src="./img/Pear.png">
 			<p>退出</p>
 		</a>

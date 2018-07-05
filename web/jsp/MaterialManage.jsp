@@ -34,6 +34,9 @@
             margin-left: auto;
             margin-right: auto;
         }
+        form{
+            margin-top: 100px;
+        }
 
     </style>
     <SCRIPT language="javascript" type="text/javascript" src="/demo/js/SearchBook.js"></SCRIPT>
