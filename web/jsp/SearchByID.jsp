@@ -67,6 +67,7 @@
                     flag = data.isExist;
                 }
             });
+            return flag;
         }
     );
 
@@ -74,17 +75,19 @@
         $("#formid").validate({
             rules:{
                 "deliveryOrder":{
-                    "required":true
+                    "required":true,
+					"deliveryOrder":true
                 }
 
             },
             messages:{
                 "deliveryOrder":{
-                    "required":"出库单号不能为空"
+                    "required":"出库单号不能为空",
+                    "deliveryOrder":"该出库单据号不存在"
                 }
             }
         });
-    }
+    });
       </SCRIPT>
   </head>
 	<%--TODO:应当异步检查是否有该出库单号，有之后再让其提交--%>

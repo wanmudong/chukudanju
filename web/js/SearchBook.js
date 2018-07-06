@@ -1,7 +1,6 @@
 	function who_submit()
 	{
 		var form1 = document.getElementById("form2");
-		//alert("hello");
 		var str=(document.getElementById("vhidden")).value;
 
 		if(str=="allmaterial")

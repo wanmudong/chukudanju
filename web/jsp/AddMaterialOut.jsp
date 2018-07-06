@@ -39,7 +39,6 @@
 
 
     </style>
-    <%--<SCRIPT language="javascript" type="text/javascript" src="/demo/js/checkadd.js"></SCRIPT>--%>
     <SCRIPT language="javascript" type="text/javascript">
         function load()
         {
@@ -114,6 +113,27 @@
             }
 
         );
+        //自定义校验规则
+        $.validator.addMethod(
+            //规则的名称
+            "realdate",
+            //校验的函数
+            function(value,element,params){
+
+                //定义一个标志
+                var flag = false;
+
+                var patt1=new RegExp("^^(?:(?!0000)[0-9]{4}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$");
+
+                flag=patt1.test(value);
+
+
+
+                //返回false代表该校验器不通过
+                return flag;
+            }
+
+        );
 
 
         $(function(){
@@ -135,7 +155,8 @@
                     },
                     "pickingDate":{
                         "required":true,
-                        "dateISO":true
+                        //"dateISO":true,
+                        "realdate":true
                     },
                     "pickingPerson":{
                         "required":true
@@ -177,7 +198,8 @@
                         "max":"领料数量不能超过9999"
                     }, "pickingDate":{
                         "required":"领料日期不能为空",
-                        "dateISO":"日期应当符合yyyy-MM-dd格式"
+                      //  "dateISO":"日期应当符合yyyy-MM-dd格式",
+                        "realdate":"日期应当符合yyyy-MM-dd格式"
                     }, "pickingPerson":{
                         "required":"领料人姓名不能为空"
 
@@ -206,69 +228,69 @@
 <body onload="load()">
 <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 <jsp:include page="/jsp/header.jsp"></jsp:include>
-<div class="center" style="font-family: '造字工房悦圆演示版'">
+<div class="center">
     <div class="col-xs-6 col-md-4 col-center-block">
-        <h1>出库单据增加<small>Outbound Documents Increase</small></h1>
+        <h1  style="font-family: '造字工房悦圆演示版'">出库单据增加<small>Outbound Documents Increase</small></h1>
     <form  id="myform"  class="form-horizontal" action="/demo/addMaterialOut" onsubmit="return validate_form(this)" method="post"accept-charset="UTF-8">
 
         <div class="form-group">
-            <label for="deliveryOrder" class="col-sm-3 control-label">出库编号：</label>
+            <label for="deliveryOrder" class="col-sm-3 control-label"  style="font-family: '造字工房悦圆演示版'">出库编号：</label>
             <div class="col-sm-9">
                 <input name="deliveryOrder" id="deliveryOrder" type="text" class="form-control" placeholder="例如：2016214224">
             </div>
         </div>
         <div class="form-group">
-            <label for="money"  class="col-sm-3 control-label">出库物资金额：</label>
+            <label for="money"  class="col-sm-3 control-label"  style="font-family: '造字工房悦圆演示版'">出库物资金额：</label>
             <div class="col-sm-9">
                 <input name="money" id="money" type="text" class="form-control" placeholder="金额不应当超过1亿">
             </div>
 
         </div>
         <div class="form-group">
-            <label for="numberofMaterial"  class="col-sm-3 control-label">领料数量：</label>
+            <label for="numberofMaterial"  class="col-sm-3 control-label"  style="font-family: '造字工房悦圆演示版'">领料数量：</label>
             <div class="col-sm-9">
             <input name="numberofMaterial" id="numberofMaterial" type="text" class="form-control" placeholder="数量不应当超过9999">
             </div>
         </div>
         <div class="form-group">
-            <label for="pickingDate"  class="col-sm-3 control-label">领料日期：</label>
+            <label for="pickingDate"  class="col-sm-3 control-label"  style="font-family: '造字工房悦圆演示版'">领料日期：</label>
             <div class="col-sm-9">
             <input name="pickingDate" id="pickingDate" type="text" class="form-control" placeholder="例如：2016-02-12">
             </div>
         </div>
         <div class="form-group">
-            <label for="pickingPerson"  class="col-sm-3 control-label">领料人姓名：</label>
+            <label for="pickingPerson"  class="col-sm-3 control-label"  style="font-family: '造字工房悦圆演示版'">领料人姓名：</label>
             <div class="col-sm-9">
             <input name="pickingPerson" id="pickingPerson" type="text" class="form-control" placeholder="例如：许佳琪">
             </div>
         </div>
         <div class="form-group">
-            <label for="keeper"  class="col-sm-3 control-label">库管员姓名：</label>
+            <label for="keeper"  class="col-sm-3 control-label"  style="font-family: '造字工房悦圆演示版'">库管员姓名：</label>
             <div class="col-sm-9">
             <input name="keeper" id="keeper" type="text" class="form-control" placeholder="例如：鞠婧祎">
             </div>
         </div>
         <div class="form-group">
-            <label for="pickingDepartment"  class="col-sm-3 control-label">领料部门名称：</label>
+            <label for="pickingDepartment"  class="col-sm-3 control-label"  style="font-family: '造字工房悦圆演示版'">领料部门名称：</label>
             <div class="col-sm-9">
             <input name="pickingDepartment" id="pickingDepartment" type="text" class="form-control" placeholder="例如：产品部">
             </div>
         </div>
         <div class="form-group">
 
-            <label for="auditor"  class="col-sm-3 control-label">审核人员姓名：</label>
+            <label for="auditor"  class="col-sm-3 control-label"  style="font-family: '造字工房悦圆演示版'">审核人员姓名：</label>
             <div class="col-sm-9">
             <input name="auditor" id="auditor" type="text" class="form-control" placeholder="例如：朱小丹">
             </div>
         </div>
         <div class="form-group">
-            <label for="auditDate" class="col-sm-3 control-label">审核日期：</label>
+            <label for="auditDate" class="col-sm-3 control-label"  style="font-family: '造字工房悦圆演示版'">审核日期：</label>
             <div class="col-sm-9">
             <input name="auditDate" id="auditDate" type="text" class="form-control" placeholder="例如：2016-02-12">
             </div>
         </div>
         <div class="form-group">
-            <label for="memo"  class="col-sm-3 control-label">备注事项：</label>
+            <label for="memo"  class="col-sm-3 control-label"  style="font-family: '造字工房悦圆演示版'">备注事项：</label>
             <div class="col-sm-9">
                 <textarea  name="memo" id="memo"  class="form-control" rows="3" placeholder="不应当超过20字"></textarea>
             </div>

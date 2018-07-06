@@ -57,7 +57,6 @@
 	</style>
 
 	<!--  导入js文件 -->
-	<SCRIPT language="javascript" type="text/javascript" src="./js/main.js"></SCRIPT>
 	<script language="javascript">
         // 这个脚本是 ie6和ie7 通用的脚本
 
@@ -96,15 +95,15 @@
 		</a>
 		<a href="/demo/jsp/SearchByID.jsp"class="col-sm-2">
 			<img src="./img/banana.png">
-			<p style="font-family: '造字工房悦圆演示版'">查询</p>
+			<p style="font-family: '造字工房悦圆演示版'">出库单据查询</p>
 		</a>
 		<a href="/demo/jsp/SearchByInformation.jsp"class="col-sm-2">
 			<img src="./img/Orange.png">
 			<p style="font-family: '造字工房悦圆演示版'">相关信息查询</p>
 		</a>
-		<a href="/demo/jsp/AddMaterialOut.jsp""class="col-sm-2">
+		<a href="/demo/jsp/AddMaterialOut.jsp"class="col-sm-2">
 			<img src="./img/Peach.png">
-			<p style="font-family: '造字工房悦圆演示版'">增加</p>
+			<p style="font-family: '造字工房悦圆演示版'">新增出库单据</p>
 		</a>
 		<%--<a href=""class="col-sm-2">--%>
 		<%--<img src="./img/Peach.png">--%>
